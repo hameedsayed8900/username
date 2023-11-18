@@ -5,7 +5,7 @@ import os
 os.system("git clone https://github.com/hameedsayed8900/username.git")
 
 # Set the working directory to the cloned repository
-os.chdir("your-repo")
+os.chdir("username")
 
 st.title("Maigret web version")
 nicknameInput = st.text_input("Enter nickname", "…")
