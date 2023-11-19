@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import sys
 
 st.title("Maigret web version")
 
@@ -17,11 +18,17 @@ if st.button("Start"):
     # Dynamically set the script path based on the current working directory
     script_path = os.path.join(os.getcwd(), script_name)
 
+    # Add the directory containing the cloned repository to the Python path
+    sys.path.append(os.getcwd())
+
     # Set execute permissions on the Maigret.py script
     os.system(f"chmod +x {script_path}")
 
-    # Run the script maigret.py with the parameter read from the nicknameInput field
-    result = os.popen(f"{script_path} {nickname}").read()
+    # Import main from the maigret module
+    from maigret import main
+
+    # Run the main function with the parameter read from the nicknameInput field
+    result = main(nickname)
 
     # Print the result (this may take a few minutes)
     st.text(result)
