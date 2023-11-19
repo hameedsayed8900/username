@@ -15,7 +15,7 @@ if st.button("Start"):
     os.system(f"git clone https://github.com/hameedsayed8900/username.git /tmp/maigret_repo")
     
     # Run the script Maigret.py with the parameter read from the nicknameInput field
-    result = os.popen(f"python /tmp/maigret_repo/Maigret.py {nickname}").read()
+    result = os.popen(f" /tmp/maigret_repo/maigret.py {nickname}").read()
     
     # Print the result (this may take a few minutes)
     st.text(result)
