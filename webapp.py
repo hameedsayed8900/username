@@ -17,9 +17,6 @@ if st.button("Start"):
     # Dynamically set the script path based on the current working directory
     script_path = os.path.join(os.getcwd(), script_name)
 
-    # Set execute permissions on the maigret.py script (if necessary)
-    os.system(f"chmod +x {script_path}")
-
     # Import main from maigret.py
     from maigret import main
 
