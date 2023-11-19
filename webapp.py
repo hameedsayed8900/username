@@ -9,7 +9,7 @@ if st.button("Start"):
     nickname = nicknameInput.title()
     
     # Specify the path to your Maigret.py script in the GitHub repository
-    script_path = "https://raw.githubusercontent.com/hameedsayed8900/username/main/Maigret.py"
+    script_path = "https://raw.githubusercontent.com/hameedsayed8900/username/main/maigret.py"
     
     # Clone the repository to a temporary directory
     os.system(f"git clone https://github.com/hameedsayed8900/username.git /tmp/maigret_repo")
